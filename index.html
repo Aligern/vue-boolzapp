@@ -20,7 +20,7 @@
     <div id="app" class="py-5">
       <div class="container h-100 bg-dark-subtle">
         <div class="row h-100">
-          <div class="col-4 bg-danger-subtle h-100 px-0">
+          <div class="col-4 bg-white h-100 px-0">
             <!-- left user profile -->
             <div class="user-banner d-flex justify-content-between">
                 <div class="profile-img h-100 d-flex justify-content-between align-items-center">
@@ -30,31 +30,32 @@
                     </h5>
                 </div>
                 <div class="align-content-center">
-                    <i class="fa-solid fa-circle-notch pe-1 "></i>
-                    <i class="fa-solid fa-message pe-1"></i>
-                    <i class="fa-solid fa-ellipsis-vertical pe-1"></i>
+                    <i class="fa-solid fa-xl fa-circle-notch pe-2 awesome-color"></i>
+                    <i class="fa-solid fa-xl fa-message pe-2 awesome-color"></i>
+                    <i class="fa-solid fa-xl fa-ellipsis-vertical pe-2 awesome-color"></i>
                 </div>
             </div>
             <!-- notification bar -->
-            <div class="user-banner bg-primary-subtle d-flex pt-1">
+            <div id="notifications" class="user-banner d-flex pt-1">
                 <div id="bell-box" class="bg-white rounded-circle text-center align-content-center">
                     <i class="fa-solid fa-bell-slash"></i>
                 </div>
                 <div>
-                    <span class="fw-bold d-block">
+                    <span class="fw-bold d-block ps-1 ">
                         Ricevi notifiche nuovi messaggi
                     </span>
-                    <a href="#" class="pb-2">
+                    <a href="#" class="pb-2 ps-1 ">
                         Ricevi notifiche desktop
                     </a>
                 </div>
             </div>
             <!-- searchbar -->
-            <div id="searchbar" class="bg-white">
+            <div id="searchbar">
                 <form class="d-flex" role="search">
                     <input class="form-control my-2  mx-2" type="search" placeholder="&#xf002 cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome" aria-label="Search">
                 </form>
             </div>
+            <!-- contact list -->
             <div id="contacts" class="overflow-y-auto">
                 <div class="user-profile">
                     <div class="container-fluid">
@@ -93,9 +94,9 @@
                     </div>
                 </div>
                 <div class="align-content-center pe-2">
-                    <i class="fa-solid fa-magnifying-glass pe-1"></i>
-                    <i class="fa-solid fa-paperclip pe-1"></i>
-                    <i class="fa-solid fa-ellipsis-vertical pe-1"></i>
+                    <i class="fa-solid fa-xl fa-magnifying-glass pe-2 awesome-color"></i>
+                    <i class="fa-solid fa-xl fa-paperclip pe-2 awesome-color"></i>
+                    <i class="fa-solid fa-xl fa-ellipsis-vertical pe-2 awesome-color"></i>
                 </div>
             </div>
             <!-- chat here -->
@@ -103,12 +104,15 @@
                 chat
             </div>
             <!-- chatbar here -->
-            <div class="user-banner d-flex">
-                <div>
-                    <i class="fa-regular fa-face-smile"></i>
+            <div id="chatbar" class="d-flex">
+                <div class="align-self-center p-5">
+                    <i class="fa-regular fa-xl fa-face-smile"></i>
                 </div>
-                <div>
-                    form qui
+                <div class="align-self-center w-100 pe-2">
+                   <input type="text" class="form-control" placeholder="scrivi un messaggio">
+                </div>
+                <div class="align-self-center">
+                    <i id="microphone" class="fa-solid fa-xl fa-microphone p-5"></i>
                 </div>
             </div>
           </div>

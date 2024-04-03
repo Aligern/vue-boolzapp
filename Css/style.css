@@ -1,18 +1,35 @@
+a {
+    color: #B1B1B1;
+}
+
 #app {
     height: 100vh;
     width: 100%;
     background: linear-gradient(180deg,#009688 20%, #DADBD3 20%);
 }
-
+/* right styles */
 #chat {
     height: calc(100% - 140px);
     background-image: url("/Images/mine.jpg");
 }
-
+#chatbar {
+    height: 70px;
+    background-color: #EAEAEA;
+}
+#microphone {
+    color: #6B7376;
+}
+/* left styles */
 #searchbar {
+    background-color: #EAEAEA;
     height: 50px;
 }
-
+#notifications {
+    background-color: #8EDAFC;
+}
+.awesome-color {
+    color: #B1B1B1;
+}
 /* contacts styles */
 .user-banner {
     background-color: #EAEAEA;
@@ -33,6 +50,7 @@
     height: 40px;
     padding: 5px;
     margin-left: 5px;
+    color: #8EDAFC;
 }
 
 .received {
