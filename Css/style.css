@@ -1,4 +1,6 @@
-
+ul {
+    list-style: none;
+}
 
 #app {
     height: 100vh;
@@ -6,22 +8,40 @@
     background: linear-gradient(180deg,#009688 20%, #DADBD3 20%);
 }
 
-.user-banner {
-    height: 7%;
-}
 
 #chat {
-    height: 86%;
+    height: calc(100% - 140px);
 }
 
 #searchbar {
-    height: 4%;
+    height: 50px;
 }
 
+/* contacts styles */
+.user-banner {
+    background-color: #EAEAEA;
+    height: 60px;
+}
 #contacts {
-    height: 82%;
+    height: calc(100% - 140px);
+}
+.user-profile {
+    height: 70px;
+}
+.profile-img {
+    width: 50px;
+}
+#bell-box {
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-left: 5px;
 }
 
-.user-profile {
-    height: 10%;
+.received {
+
+}
+.sent {
+
 }
