@@ -11,7 +11,7 @@ a {
 /* right styles */
 #chat {
     height: calc(100% - 140px);
-    background-image: url("/Images/mine.jpg");
+    background-image: url("/Img/mine.jpg");
 }
 #chatbar {
     height: 70px;
@@ -31,13 +31,16 @@ a {
 .awesome-color {
     color: #B1B1B1;
 }
+.active {
+    background-color: #B1B1B1;
+}
 /* contacts styles */
 .user-banner {
     background-color: #EAEAEA;
     height: 60px;
 }
 #contacts {
-    height: calc(100% - 140px);
+    height: calc(100% - 170px);
 }
 .user-profile {
     height: 70px;

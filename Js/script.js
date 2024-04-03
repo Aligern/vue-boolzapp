@@ -10,9 +10,14 @@ createApp ({
         }
     },
     methods:{
-
+        selectContact(id) {
+            this.activeContactId = id;
+        }
     },
     computed:{
+        activeContact() {
+            return this.contacts.find((contact) => contact.id === this.activeContactId)
+        }
 
     },
     mounted() {
