@@ -6,6 +6,7 @@
 
 #chat {
     height: calc(100% - 140px);
+    background-image: url("/Images/mine.jpg");
 }
 
 #searchbar {
