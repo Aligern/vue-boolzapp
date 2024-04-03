@@ -18,25 +18,29 @@
 
   <body>
     <div id="app" class="py-5">
+        <!-- whatsapp window -->
       <div class="container h-100 bg-dark-subtle">
         <div class="row h-100">
           <div class="col-4 bg-white h-100 px-0">
             <!-- left user profile -->
             <div class="user-banner d-flex justify-content-between">
+                <!-- user avatar and name -->
                 <div class="profile-img h-100 d-flex justify-content-between align-items-center">
-                    <img src="Images/avatar_1.jpg" alt="" class="img-fluid rounded-circle p-1">
+                    <img src="Img/avatar_1.jpg" alt="" class="img-fluid rounded-circle p-1">
                     <h5>
                         Io..
                     </h5>
                 </div>
+                <!-- icon buttons -->
                 <div class="align-content-center">
-                    <i class="fa-solid fa-xl fa-circle-notch pe-2 awesome-color"></i>
-                    <i class="fa-solid fa-xl fa-message pe-2 awesome-color"></i>
-                    <i class="fa-solid fa-xl fa-ellipsis-vertical pe-2 awesome-color"></i>
+                    <i class="fa-solid fa-xl fa-circle-notch pe-3 awesome-color"></i>
+                    <i class="fa-solid fa-xl fa-message pe-3 awesome-color"></i>
+                    <i class="fa-solid fa-xl fa-ellipsis-vertical pe-3 awesome-color"></i>
                 </div>
             </div>
             <!-- notification bar -->
             <div id="notifications" class="user-banner d-flex pt-1">
+                <!-- notification img -->
                 <div id="bell-box" class="bg-white rounded-circle text-center align-content-center">
                     <i class="fa-solid fa-bell-slash"></i>
                 </div>
@@ -57,20 +61,33 @@
             </div>
             <!-- contact list -->
             <div id="contacts" class="overflow-y-auto">
-                <div class="user-profile">
+                <div v-for="contact in contacts" :key="contact.id" class="user-profile">
+
                     <div class="container-fluid">
+
                         <div class="h-100 d-flex justify-content-between">
+
+                            <!-- contact avatar -->
                             <div class="profile-img h-100 py-1">
-                                <img src="Images/avatar_1.jpg" alt="" class="img-fluid  rounded-circle">
+
+                                <img :src="contact.avatar" alt="" class="img-fluid  rounded-circle">
+
                             </div>
+
+                            <!-- contact name -->
                             <div>
+
                                 <h6>
-                                    Michele
+                                    {{contact.name}}
                                 </h6>
+
+                            <!-- last msg -->
                                 <p>
                                     ultimo msg
                                 </p>
+
                             </div>
+
                             <div class="user-date h-100 ms-auto">
                                 13.00
                             </div>
@@ -82,35 +99,40 @@
           <!-- right user profile -->
           <div class="col-8 bg-success-subtle h-100 px-0 border-dark-subtle border-start">
             <div class="user-banner d-flex justify-content-between">
+                <!-- user avatar and name -->
                 <div class="profile-img h-100 py-1 d-flex">
-                    <img src="Images/avatar_1.jpg" alt="" class="img-fluid rounded-circle p-1">
+                    <img src="Img/avatar_1.jpg" alt="" class="img-fluid rounded-circle p-1">
                     <div>
                         <h6>
                             Michele
                         </h6>
+                        <!-- last access -->
                         <p>
                            ultimo accesso oggi alle 13:00
                         </p>
                     </div>
                 </div>
-                <div class="align-content-center pe-2">
-                    <i class="fa-solid fa-xl fa-magnifying-glass pe-2 awesome-color"></i>
-                    <i class="fa-solid fa-xl fa-paperclip pe-2 awesome-color"></i>
-                    <i class="fa-solid fa-xl fa-ellipsis-vertical pe-2 awesome-color"></i>
+                <!-- icon buttons -->
+                <div class="align-content-center pe-3">
+                    <i class="fa-solid fa-xl fa-magnifying-glass pe-3 awesome-color"></i>
+                    <i class="fa-solid fa-xl fa-paperclip pe-3 awesome-color"></i>
+                    <i class="fa-solid fa-xl fa-ellipsis-vertical pe-3 awesome-color"></i>
                 </div>
             </div>
             <!-- chat here -->
             <div class="bg-primary-subtle overflow-y-auto" id="chat">
                 chat
             </div>
-            <!-- chatbar here -->
+            <!-- emoji button -->
             <div id="chatbar" class="d-flex">
                 <div class="align-self-center p-5">
                     <i class="fa-regular fa-xl fa-face-smile"></i>
                 </div>
-                <div class="align-self-center w-100 pe-2">
+                <!-- chat typebar here -->
+                <div class="align-self-center w-100 pe-3">
                    <input type="text" class="form-control" placeholder="scrivi un messaggio">
                 </div>
+                <!-- vocal msg icon -->
                 <div class="align-self-center">
                     <i id="microphone" class="fa-solid fa-xl fa-microphone p-5"></i>
                 </div>
