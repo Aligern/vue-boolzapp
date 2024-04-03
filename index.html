@@ -97,12 +97,13 @@
                         <h6>
                             {{activeContact.name}}
                         </h6>
-                        <!-- last access -->
+                        <!-- last access has to become dynamic -->
                         <p>
                            ultimo accesso oggi alle 13:00
                         </p>
                     </div>
                 </div>
+
                 <!-- icon buttons -->
                 <div class="align-content-center pe-3">
                     <i class="fa-solid fa-xl fa-magnifying-glass pe-3 awesome-color"></i>
@@ -110,13 +111,19 @@
                     <i class="fa-solid fa-xl fa-ellipsis-vertical pe-3 awesome-color"></i>
                 </div>
             </div>
+
             <!-- chat here -->
             <div class="bg-primary-subtle overflow-y-auto" id="chat">
-                chat
+                <div v-for="(message, index) in activeContact.messages">
+                    <div class="message" :class="message.status">
+                        {{message.message}}
+                    </div>
+                </div>
             </div>
+
             <!-- emoji button -->
             <div id="chatbar" class="d-flex">
-                <div class="align-self-center p-5">
+                <div class="align-self-center px-3">
                     <i class="fa-regular fa-xl fa-face-smile"></i>
                 </div>
 
@@ -127,7 +134,7 @@
 
                 <!-- vocal msg icon -->
                 <div class="align-self-center">
-                    <i id="microphone" class="fa-solid fa-xl fa-microphone p-5"></i>
+                    <i id="microphone" class="fa-solid fa-xl fa-microphone px-3"></i>
                 </div>
             </div>
           </div>
