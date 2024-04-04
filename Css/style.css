@@ -22,9 +22,11 @@ a {
 }
 .message {
     margin: 5px;
-    width: 100px;
+    width: 300px;
     border-radius: 20px;
     padding: 10px;
+    overflow-y: auto;
+    overflow-wrap: break-word;
 }
 /* left styles */
 #searchbar {

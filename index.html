@@ -126,10 +126,10 @@
             </div>
 
             <!-- chat here -->
-            <div class="bg-primary-subtle overflow-y-auto" id="chat">
+            <div class="px-3 overflow-y-auto" id="chat">
                 <div v-for="(message, index) in activeContact.messages">
                     <div class="message" :class="message.status">
-                        <div>
+                        <div class="">
                             {{message.message}}
                         </div>
                         <span>
