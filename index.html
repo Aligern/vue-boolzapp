@@ -131,19 +131,16 @@
                     <div class="message" :class="message.status">
                         <div class="d-flex justify-content-between">
                             {{message.message}}
-
                             <div>
                                 <button class="btn" type="button" @click="openDropdown(index)">
                                     <i id="chevron" class="fa-solid fa-chevron-down"></i>
                                 </button>
-
-                                <ul v-if="currentMsg === index">
-                                    <li>
-                                        Elimina
-                                    </li>
-                                </ul>
                             </div>
-
+                            <ul class="ls-dropdown" v-if="currentMsg === index">
+                                <li>
+                                    Elimina messaggio
+                                </li>
+                            </ul>
                         </div>
                         <div class="text-end">
                             {{message.date}}
