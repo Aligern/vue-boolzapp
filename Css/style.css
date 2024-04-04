@@ -20,6 +20,9 @@ a {
 #microphone, #fa-paper-plane {
     color: #6B7376;
 }
+#chevron {
+    color: #B1B1B1;
+}
 .message {
     margin: 5px;
     width: 300px;

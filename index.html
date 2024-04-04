@@ -127,16 +127,48 @@
 
             <!-- chat here -->
             <div class="px-3 overflow-y-auto" id="chat">
+
                 <div v-for="(message, index) in activeContact.messages">
+
                     <div class="message" :class="message.status">
-                        <div>
+                        <div class="d-flex justify-content-between">
+
                             {{message.message}}
+
+                            <div>
+
+                                <button class="btn px-1" type="button">
+
+                                    <i id="chevron" class="fa-solid fa-chevron-down"></i>
+
+                                </button>
+
+                                <ul class="dropdown-menu">
+
+                                    <li>
+
+                                        <button class="dropdown-item" type="button">
+
+                                        Action
+
+                                        </button>
+
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
                         </div>
+
                         <div class="text-end">
                             {{message.date}}
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
 
             <!-- emoji button -->
