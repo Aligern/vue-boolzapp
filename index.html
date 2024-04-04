@@ -18,12 +18,15 @@
 
   <body>
     <div id="app" class="py-5">
+
         <!-- whatsapp window -->
       <div class="container h-100 bg-dark-subtle">
         <div class="row h-100">
           <div class="col-4 bg-white h-100 px-0">
+
             <!-- left user profile -->
             <div class="user-banner d-flex justify-content-between">
+
                 <!-- user avatar and name -->
                 <div class="profile-img h-100 d-flex justify-content-between align-items-center">
                     <img src="Img/avatar_1.jpg" alt="" class="img-fluid rounded-circle p-1">
@@ -31,6 +34,7 @@
                         Io..
                     </h5>
                 </div>
+
                 <!-- icon buttons -->
                 <div class="align-content-center">
                     <i class="fa-solid fa-xl fa-circle-notch pe-3 awesome-color"></i>
@@ -38,8 +42,10 @@
                     <i class="fa-solid fa-xl fa-ellipsis-vertical pe-3 awesome-color"></i>
                 </div>
             </div>
+
             <!-- notification bar -->
             <div id="notifications" class="user-banner d-flex pt-1">
+
                 <!-- notification img -->
                 <div id="bell-box" class="bg-white rounded-circle text-center align-content-center">
                     <i class="fa-solid fa-bell-slash"></i>
@@ -53,32 +59,36 @@
                     </a>
                 </div>
             </div>
+
             <!-- searchbar -->
             <div id="searchbar">
                 <form class="d-flex" role="search">
-                    <input class="form-control my-2  mx-2" type="search" placeholder="&#xf002 cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome" aria-label="Search">
+                    <input class="form-control my-2  mx-2" type="search" placeholder="&#xf002 cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome" aria-label="Search" v-model="searchText">
                 </form>
             </div>
+
             <!-- contact list -->
             <div id="contacts" class="overflow-y-auto">
-                <div v-for="(contact, index) in contacts" :key="contact.id" @click="selectContact(contact.id)" class="user-profile" :class="{'active' : activeContactId === contact.id}">
+                <div v-for="(contact, index) in filteredContacts" :key="contact.id" @click="selectContact(contact.id)" class="user-profile" :class="{'active' : activeContactId === contact.id}">
                     <div class="container-fluid">
                         <div class="h-100 d-flex justify-content-between">
+
                             <!-- contact avatar -->
                             <div class="profile-img h-100 py-1">
                                 <img :src="contact.avatar" alt="" class="img-fluid  rounded-circle">
                             </div>
+
                             <!-- contact name -->
                             <div class="p-2">
                                 <h6>
                                     {{contact.name}}
                                 </h6>
+
                             <!-- last msg -->
                                 <p>
                                     ultimo msg
                                 </p>
                             </div>
-
                             <div class="user-date h-100 ms-auto">
                                 13.00 
                             </div>
@@ -87,9 +97,11 @@
                 </div>
             </div>
           </div>
+
           <!-- right user profile -->
           <div class="col-8 bg-success-subtle h-100 px-0 border-dark-subtle border-start">
             <div class="user-banner d-flex justify-content-between">
+
                 <!-- user avatar and name -->
                 <div class="profile-img h-100 w-50  py-1 d-flex">
                     <img :src="activeContact.avatar" alt="" class="img-fluid rounded-circle p-1">
@@ -97,6 +109,7 @@
                         <h6>
                             {{activeContact.name}}
                         </h6>
+
                         <!-- last access has to become dynamic -->
                         <p>
                            ultimo accesso oggi alle 13:00
@@ -116,7 +129,12 @@
             <div class="bg-primary-subtle overflow-y-auto" id="chat">
                 <div v-for="(message, index) in activeContact.messages">
                     <div class="message" :class="message.status">
-                        {{message.message}}
+                        <div>
+                            {{message.message}}
+                        </div>
+                        <span>
+                            {{message.date}}
+                        </span>
                     </div>
                 </div>
             </div>
@@ -129,7 +147,7 @@
 
                 <!-- chat typebar here -->
                 <div class="align-self-center w-100 pe-3">
-                   <input type="text" class="form-control" placeholder="scrivi un messaggio">
+                   <input type="text" class="form-control" v-model="msgText" @keyup.enter="sendMessage()" placeholder="scrivi un messaggio">
                 </div>
 
                 <!-- vocal msg icon -->
