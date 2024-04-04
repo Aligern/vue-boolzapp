@@ -16,20 +16,24 @@ createApp ({
             this.activeContactId = id;
         },
         sendMessage() {
-            const newMsg = {
-                date: new Date().toLocaleString(),
-                message: this.msgText,
-                status: 'sent'
+            if (this.msgText.trim() === "") {
+            } else {
+                const newMsg = {
+                    date: new Date().toLocaleString(),
+                    message: this.msgText,
+                    status: 'sent'
+                }
+                this.activeContact.messages.push(newMsg);
+                this.msgText = '';
+                setTimeout(() => {
+                    const newMsg = {
+                    date: new Date().toLocaleString(),
+                    message: 'ok',
+                    status: 'received'
+                }
+                this.activeContact.messages.push(newMsg);
+                },1000);
             }
-            this.activeContact.messages.push(newMsg);
-            this.msgText = '';
-            setTimeout(() => {const newMsg = {
-                date: new Date().toLocaleString(),
-                message: 'ok',
-                status: 'received'
-            }
-            this.activeContact.messages.push(newMsg);
-            },1000);
         },
     },
     computed:{

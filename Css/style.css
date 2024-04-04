@@ -25,7 +25,7 @@ a {
     width: 300px;
     border-radius: 20px;
     padding: 10px;
-    overflow-y: auto;
+    overflow: auto;
     overflow-wrap: break-word;
 }
 /* left styles */
@@ -64,7 +64,6 @@ a {
     margin-left: 5px;
     color: #8EDAFC;
 }
-
 .received {
     background-color: white;
 }
