@@ -9,6 +9,7 @@ createApp ({
             activeContactId: 1,
             msgText: '',
             searchText: '',
+            currentMsg: -1,
         }
     },
     methods:{
@@ -35,6 +36,13 @@ createApp ({
                 },1000);
             }
         },
+        openDropdown(index) {
+           if (this.currentMsg !== index) {
+            this.currentMsg = index;
+           } else {
+            this.currentMsg = -1;
+           }
+        }
     },
     computed:{
         activeContact() {
