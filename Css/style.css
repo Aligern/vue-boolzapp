@@ -43,6 +43,10 @@ ul {
     background-color: white;
     padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
+}
+.date {
+    font-size: x-small;
 }
 /* left styles */
 #searchbar {

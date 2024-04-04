@@ -42,6 +42,9 @@ createApp ({
            } else {
             this.currentMsg = -1;
            }
+        },
+        deleteMsg(index) {
+            this.activeContact.messages.splice(index, 1);
         }
     },
     computed:{
