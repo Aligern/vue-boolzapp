@@ -17,6 +17,7 @@
   </head>
 
   <body>
+
     <div id="app" class="py-5">
 
         <!-- whatsapp window -->
@@ -31,15 +32,15 @@
                 <div class="profile-img h-100 d-flex justify-content-between align-items-center">
                     <img src="Img/avatar_1.jpg" alt="" class="img-fluid rounded-circle p-1">
                     <h5>
-                        Io..
+                        Luca
                     </h5>
                 </div>
 
                 <!-- icon buttons -->
                 <div class="align-content-center">
-                    <i class="fa-solid fa-lg fa-circle-notch pe-3 awesome-color"></i>
-                    <i class="fa-solid fa-lg fa-message pe-3 awesome-color"></i>
-                    <i class="fa-solid fa-lg fa-ellipsis-vertical pe-3 awesome-color"></i>
+                    <i class="fa-solid fa-lg fa-circle-notch pe-3 awesome-color icon-pointer"></i>
+                    <i class="fa-solid fa-lg fa-message pe-3 awesome-color icon-pointer"></i>
+                    <i class="fa-solid fa-lg fa-ellipsis-vertical pe-3 awesome-color icon-pointer"></i>
                 </div>
             </div>
 
@@ -119,9 +120,9 @@
 
                 <!-- icon buttons -->
                 <div class="align-content-center pe-3">
-                    <i class="fa-solid fa-lg fa-magnifying-glass pe-3 awesome-color"></i>
-                    <i class="fa-solid fa-lg fa-paperclip pe-3 awesome-color"></i>
-                    <i class="fa-solid fa-lg fa-ellipsis-vertical pe-3 awesome-color"></i>
+                    <i class="fa-solid fa-lg fa-magnifying-glass pe-3 awesome-color icon-pointer"></i>
+                    <i class="fa-solid fa-lg fa-paperclip pe-3 awesome-color icon-pointer"></i>
+                    <i class="fa-solid fa-lg fa-ellipsis-vertical pe-3 awesome-color icon-pointer"></i>
                 </div>
             </div>
 
@@ -154,7 +155,7 @@
             <!-- emoji button -->
             <div id="chatbar" class="d-flex">
                 <div class="align-self-center px-3">
-                    <i class="fa-regular fa-xl fa-face-smile"></i>
+                    <i class="fa-regular fa-xl fa-face-smile icon-pointer"></i>
                 </div>
 
                 <!-- chat typebar here -->
@@ -164,13 +165,20 @@
 
                 <!-- vocal msg icon -->
                 <div class="align-self-center">
-                    <i id="microphone" class="fa-solid fa-xl fa-microphone px-3" :class="{ 'd-none' : msgText.length >= 1}"></i>
-                    <i id="fa-paper-plane" class="fa-solid fa-xl fa-paper-plane px-2" class="d-none" :class="{ 'd-none' : msgText.length < 1, 'd-block' : msgText.length >= 1 }"></i>
+                    <i id="microphone" class="fa-solid fa-xl fa-microphone px-3 icon-pointer" :class="{ 'd-none' : msgText.length >= 1}"></i>
+                    <i id="fa-paper-plane" class="fa-solid fa-lg fa-paper-plane px-3 icon-pointer" class="d-none" :class="{ 'd-none' : msgText.length < 1, 'd-block' : msgText.length >= 1 }"></i>
                 </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </body>
+
 </html>

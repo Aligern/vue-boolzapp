@@ -11,6 +11,9 @@ ul {
     width: 100%;
     background: linear-gradient(180deg,#009688 20%, #DADBD3 20%);
 }
+.icon-pointer {
+    cursor: pointer;
+}
 /* right styles */
 #chat {
     height: calc(100% - 140px);
